@@ -21,7 +21,7 @@ import Communications from 'react-native-communications';
 class EmployeeDetail extends Component {    
     sendMessage = () => {
         const body = `Hello ${this.props.navigation.getParam('nama')} , Your Upcoming shift is on ${this.props.navigation.getParam('shift')}`
-        Communications.text(this.props.navigation.getParam('phone') , body )       
+        Communications.textWithoutEncoding(this.props.navigation.getParam('phone') , body )       
     }
     
     render() {
